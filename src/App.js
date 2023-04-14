@@ -1,21 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import ListWrapper from './components/ListWrapper/ListWrapper';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>Pierwsze Kroki - czym jest jsx</p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ListWrapper />
     </div>
   );
 }
