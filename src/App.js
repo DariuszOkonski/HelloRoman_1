@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.scss';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import Form from './components/Form/Form';
 
@@ -62,8 +61,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Form submitFn={this.addItem} />
         <ListWrapper items={this.state.items} />
+        <Form submitFn={this.addItem} />
       </div>
     );
   }

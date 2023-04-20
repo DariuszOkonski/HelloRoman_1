@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ListItem.scss';
+import styles from './ListItem.module.scss';
 
 const defaultImage =
   'https://www.1lo.gorzow.pl/wp-content/uploads/2019/11/user-no-name.png';
 
 const ListItem = ({ image, name, description, twitterLink }) => {
   return (
-    <li className='listItem___wrapper'>
-      <img src={image || defaultImage} alt={name} className='listItem__image' />
+    <li className={styles.wrapper}>
+      <img src={image || defaultImage} alt={name} className={styles.image} />
       <div>
-        <h2 className='listItem__name'>{name}</h2>
-        <p className='listItem__description'>{description}</p>
+        <h2 className={styles.name}>{name}</h2>
+        <p className={styles.description}>{description}</p>
         <a
           href={twitterLink}
           target='_blank'
-          className='listItem__button'
+          className={styles.button}
           rel='noreferrer'
         >
           visit twitter page
