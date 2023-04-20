@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ListItem.css';
+import './ListItem.scss';
 
 const defaultImage =
   'https://www.1lo.gorzow.pl/wp-content/uploads/2019/11/user-no-name.png';
