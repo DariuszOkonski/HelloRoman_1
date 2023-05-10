@@ -6,9 +6,15 @@ const defaultImage =
   'https://www.1lo.gorzow.pl/wp-content/uploads/2019/11/user-no-name.png';
 
 const ListItem = ({ image, name, description, twitterLink }) => {
+  const ImageTag = image ? 'img' : 'div';
+
   return (
     <li className={styles.wrapper}>
-      <img src={image || defaultImage} alt={name} className={styles.image} />
+      <ImageTag
+        src={image || defaultImage}
+        alt={name}
+        className={image ? styles.image : styles.imageNone}
+      />
       <div>
         <h2 className={styles.name}>{name}</h2>
         <p className={styles.description}>{description}</p>

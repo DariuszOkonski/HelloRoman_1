@@ -26,6 +26,12 @@
   border-radius: 50%;
 }
 
+.imageNone {
+  @extend .image;
+  background: url('https://www.1lo.gorzow.pl/wp-content/uploads/2019/11/user-no-name.png');
+  background-size: cover;
+}
+
 .name {
   margin: 0;
   color: #1e58ff;

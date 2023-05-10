@@ -5,16 +5,28 @@ function Form({ submitFn }) {
   return (
     <div className={styles.wrapper}>
       <h2>Add new twitter account</h2>
-      <form className={styles.form} onSubmit={submitFn}>
+      <form autoComplete='off' className={styles.form} onSubmit={submitFn}>
         <div className={styles.item}>
-          <input className={styles.input} id='name' name='name' type='text' />
+          <input
+            className={styles.input}
+            id='name'
+            name='name'
+            type='text'
+            required
+          />
           <label className={styles.label} htmlFor='name'>
             Name
           </label>
           <div className={styles.bar} />
         </div>
         <div className={styles.item}>
-          <input className={styles.input} id='link' name='link' type='text' />
+          <input
+            className={styles.input}
+            id='link'
+            name='link'
+            type='text'
+            required
+          />
           <label className={styles.label} htmlFor='link'>
             Link
           </label>
@@ -28,7 +40,7 @@ function Form({ submitFn }) {
           <div className={styles.bar} />
         </div>
         <div className={styles.item}>
-          <textarea name='description' />
+          <textarea name='description' required />
         </div>
         <div className={styles.item}>
           <button className={styles.button} type='submit'>
