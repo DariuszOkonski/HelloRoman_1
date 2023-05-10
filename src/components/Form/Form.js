@@ -1,51 +1,21 @@
+import Button from '../Button/Button';
+import Input from '../Input/Input';
+import Title from '../Title/Title';
 import styles from './Form.module.scss';
 import React from 'react';
 
 function Form({ submitFn }) {
   return (
     <div className={styles.wrapper}>
-      <h2>Add new twitter account</h2>
+      <Title>Add new twitter account</Title>
       <form autoComplete='off' className={styles.form} onSubmit={submitFn}>
+        <Input name='name' label='Name' maxLength={30} />
+        <Input name='link' label='Twitter link' />
+        <Input name='image' label='Image' />
+        <Input tag='textarea' name='description' label='Description' />
+
         <div className={styles.item}>
-          <input
-            className={styles.input}
-            id='name'
-            name='name'
-            type='text'
-            required
-          />
-          <label className={styles.label} htmlFor='name'>
-            Name
-          </label>
-          <div className={styles.bar} />
-        </div>
-        <div className={styles.item}>
-          <input
-            className={styles.input}
-            id='link'
-            name='link'
-            type='text'
-            required
-          />
-          <label className={styles.label} htmlFor='link'>
-            Link
-          </label>
-          <div className={styles.bar} />
-        </div>
-        <div className={styles.item}>
-          <input className={styles.input} id='image' name='image' type='text' />
-          <label className={styles.label} htmlFor='image'>
-            Image
-          </label>
-          <div className={styles.bar} />
-        </div>
-        <div className={styles.item}>
-          <textarea name='description' required />
-        </div>
-        <div className={styles.item}>
-          <button className={styles.button} type='submit'>
-            add new item
-          </button>
+          <Button>Add new item</Button>
         </div>
       </form>
     </div>

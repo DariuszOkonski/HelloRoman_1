@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ListItem.module.scss';
+import Button from '../../Button/Button';
+import Title from '../../Title/Title';
 
 const defaultImage =
   'https://www.1lo.gorzow.pl/wp-content/uploads/2019/11/user-no-name.png';
@@ -16,16 +18,10 @@ const ListItem = ({ image, name, description, twitterLink }) => {
         className={image ? styles.image : styles.imageNone}
       />
       <div>
-        <h2 className={styles.name}>{name}</h2>
+        {/* <h2 className={styles.name}>{name}</h2> */}
+        <Title>{name}</Title>
         <p className={styles.description}>{description}</p>
-        <a
-          href={twitterLink}
-          target='_blank'
-          className={styles.button}
-          rel='noreferrer'
-        >
-          visit twitter page
-        </a>
+        <Button href={twitterLink}>visit twitter page</Button>
       </div>
     </li>
   );

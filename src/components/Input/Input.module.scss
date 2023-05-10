@@ -1,0 +1,42 @@
+.form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.item {
+  width: 100%;
+  margin: 24px 0;
+  position: relative;
+  flex-shrink: 1;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+.input:not(:empty) + .label {
+  top: -20px;
+}
+
+.input:focus + .label {
+  top: -20px;
+  transition: 0.2s linear;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s linear;
+}
+
+.bar {
+  width: 100%;
+}
